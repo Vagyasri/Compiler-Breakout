@@ -1,10 +1,18 @@
 import './style.css';
 
-const string = 'Hello World';
+document.getElementById('inputfile')
+  .addEventListener('change', (e) => {
+    const fr = new FileReader();
+    fr.onload = () => {
+      const words = fr.result
+        .replace(/[\r\n]+/g, ' ')
+        .split(' ');
+      const newWords = words.filter((word) => (word !== 'print') && (word !== 'start') && (word !== 'end'));
+      const newString = newWords.join(' ');
+      const noSpace = newString.replace(/\s/g, '');
+      document.getElementById('output')
+        .textContent = noSpace;
+    };
 
-const words = string.split(' ');
-const newWords = words.filter((word) => (word !== 'print') && (word !== 'start') && (word !== 'end') && (word !== ' '));
-const newString = newWords.join(' ');
-const noSpace = newString.replace(/\s/g, '');
-
-console.log(noSpace);
+    fr.readAsText(e.target.files[0]);
+  });
