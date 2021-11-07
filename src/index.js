@@ -5,7 +5,7 @@ document.getElementById('inputfile')
     const fr = new FileReader();
     fr.onload = () => {
       const words = fr.result
-        .replace(/[\r\n]+/g, ' ')
+        .replace(/[\r\n\d]+/g, ' ')
         .split(' ');
       const newWords = words.filter((word) => (word !== 'print') && (word !== 'start') && (word !== 'end'));
       const newString = newWords.join(' ');
