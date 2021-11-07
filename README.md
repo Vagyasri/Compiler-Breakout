@@ -1,4 +1,9 @@
 # Compiler-Breakout
+In this Challenge, you are stuck in a computer simulation and will need to interpret some instructions in order to find your way out. So, I have written a compiler that can parse code in a new programming language with similar features to existing languages but also some new ones.
+
+### Level 1:
+
+![Level 1](src/level1/Level1.png)
 
 ## Built With
 
@@ -7,12 +12,6 @@
 - JavaScipt
 - Webpack
 - ES6
-
-<!-- ## Screenshot
-
-![Drum](Drum.png) 
-
--->
 
 ## Live Demo
 
