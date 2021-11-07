@@ -1,18 +1,10 @@
 import './style.css';
 
-document.getElementById('inputfile')
-  .addEventListener('change', (e) => {
-    const fr = new FileReader();
-    fr.onload = () => {
-      const words = fr.result
-        .replace(/[\r\n\d]+/g, ' ')
-        .split(' ');
-      const newWords = words.filter((word) => (word !== 'print') && (word !== 'start') && (word !== 'end'));
-      const newString = newWords.join(' ');
-      const noSpace = newString.replace(/\s/g, '');
-      document.getElementById('output')
-        .textContent = noSpace;
-    };
+const string = '4 start print kxqd print zlifoesb print tzrpnqk print qrjlros print eu print qdza print npmfm print yod print ealz print ippmnc print alsmd print uitc print ycng print mqer print ilzhdbdp print huzxasqee if false print pp print kvbi print ijeptgzrs print pqqufbujp print kauvzcb print aogp print pyklu print trby print ba end else print onzahvi print gjpjlf print yabkjrua print znsayjcen print pfcfpnrb print rsfmde print mphdbfc print fbni print f print h print jpcyja print czmq end print fyeuxhn print rx print aeh print y print klvxnfi print oklsd print ldeys end';
 
-    fr.readAsText(e.target.files[0]);
-  });
+// split a string
+const splitString = (string) => {
+  const splitString = string.split(' ');
+  return splitString;
+};
+console.log(splitString(string));

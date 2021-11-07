@@ -7,7 +7,7 @@ In this Challenge, you are stuck in a computer simulation and will need to inter
 
 ### Level 2:
 
-![Level 1](src/level1/Level1.png)
+![Level 2](src/level2/Level2.png)
 
 For More information, go through the attached PDF files along with the corresponding level folder.
 
