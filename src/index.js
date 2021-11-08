@@ -17,6 +17,5 @@ document.getElementById('inputfile')
       document.getElementById('output')
         .textContent = noSpace;
     };
-
     fr.readAsText(e.target.files[0]);
   });

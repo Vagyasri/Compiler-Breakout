@@ -11,9 +11,13 @@ console.log(arr);
 
 const fls = arr.indexOf('false');
 const els = arr.indexOf('else');
-const newArr = arr.slice(fls - 1, els + 1);
-const newArr2 = arr.splice(fls - 1, newArr.length);
 
-console.log(newArr);
+const ifFalse = () => {
+  const findIf = arr.indexOf('if');
+  if (findIf + 1 === 'false') {
+    const newArr = arr.slice(fls - 1, els + 1);
+    arr.splice(fls - 1, newArr.length);
+  }
+};
+
 console.log(arr);
-
